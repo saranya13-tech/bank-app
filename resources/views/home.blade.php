@@ -25,7 +25,7 @@
                             <p class="m-0 text-muted">YOUR BALANCE</label>
                         </div>
                         <div class="col-8">
-                            <p class="m-0">{{ number_format($balance[0]['balance'],2) }} INR</p>
+                            <p class="m-0">{{ Auth::user()->balance }} INR</p>
                         </div>
                     </div>
                 </li>

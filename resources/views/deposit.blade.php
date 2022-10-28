@@ -49,7 +49,6 @@
                     <div class="form-group mb-3 ">
                       <label class="form-label">Amount</label>
                       <div >
-                      <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                                         <input id="amount" min="1" step="0.1" placeholder="Enter amount to deposit" type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
 
                                         @error('amount')

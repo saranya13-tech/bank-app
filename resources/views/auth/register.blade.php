@@ -34,7 +34,8 @@
             <div class="mb-3">
               <label class="form-label">Password</label>
               <div class="input-group input-group-flat">
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+              <input type="password" class="form-control @error('password') is-invalid @enderror" 
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="password" required autocomplete="new-password">
 
                 @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -45,7 +46,7 @@
             </div>
             <div class="mb-3">
               <label class="form-check">
-              <input class="form-check-input" type="checkbox" name="terms" id="terms" {{ old("terms") ? 'checked' : '' }}>
+              <input class="form-check-input" type="checkbox" name="terms" id="terms" {{ old("terms") ? 'checked' : '' }} required>
 
                <span class="form-check-label">Agree the <a  tabindex="-1">terms and policy</a>.</span>
               </label>
