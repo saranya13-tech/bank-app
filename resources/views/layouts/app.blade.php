@@ -15,6 +15,8 @@
     <title>{{ config('app.name', 'ABC BANK') }}</title>
     <!-- CSS files -->
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
     <link href="{{ asset('Tabler/dist/css/tabler.min.css')}}" rel="stylesheet"/>
     <link href="{ asset('Tabler/dist/css/tabler-flags.min.css')}}" rel="stylesheet"/>
     <link href="{{ asset('Tabler/dist/css/tabler-payments.min.css')}}" rel="stylesheet"/>

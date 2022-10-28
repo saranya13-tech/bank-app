@@ -5,19 +5,37 @@
 <div class="container-xl">
 
 <div class="col-md-6">
-@if ($message = Session::get('success'))
-            <div class="alert alert-success alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ $message }}</strong>
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-dismissible" role="alert">
+            <div class="d-flex">
+                <div>
+                <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                <!-- SVG icon code with class="alert-icon" -->
+                </div>
+                <div>
+                
+                <div class="text-muted">{{ $message }}!</div>
+                </div>
             </div>
+            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+            </div>
+            
             @endif
             @if ($message = Session::get('error'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ $message }}</strong>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+            <div class="d-flex">
+                <div>
+                <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                <!-- SVG icon code with class="alert-icon" -->
+                </div>
+                <div>
+                
+                <div class="text-muted">{{ $message }}!</div>
+                </div>
             </div>
-
-
+            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+            </div>
+                        
             @endif
               <div class="card">
                 <div class="card-header">
